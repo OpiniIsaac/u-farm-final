@@ -6,7 +6,7 @@ head
 
 
 header
-  h1 AO Registration Form
+  h1 Farmer One Registration Form
 form#regForm(name='register' action ='/register' method ='post'
  onsubmit='return Validate();')
   fieldset
@@ -46,8 +46,14 @@ form#regForm(name='register' action ='/register' method ='post'
   fieldset
     legend
       h1 Farm Details
+
     label(for='ward') Ward Represented:
-    input#ward(type='text' name='ward' placeholder='Enter your ward')
+      select#ward(name='ward' type='text')
+        option(value='') --Select--
+        option(value='Ward A' name='ward' ) Ward A
+        option(value='Ward b' name='ward' ) Ward B
+        option(value='Ward c' name='ward') Ward C
+        option(value='Ward D' name='ward') Ward D
     small#wardError
     br
     label(for='uniqueId') Unique FO Number:
