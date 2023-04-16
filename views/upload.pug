@@ -7,7 +7,7 @@ head
   link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
 .container
   h1 Upload Produce and Products
-  form
+  form(name='register' action ='/uploadProducts' method ='post')
     .form-group
       label(for='fullName') Name:
       input#fullName.form-control(type='text' name='fullName')
