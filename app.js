@@ -11,8 +11,13 @@ const passport = require("passport");
 const config = require("./config/database");
 
 const aoRoute = require('./routes/aoDashboardRouts')
-const aoAuthRoute = require('./routes/aoAuth')
 const foRoute = require('./routes/foDashboard')
+
+
+
+const aoAuthRoute = require('./routes/aoAuth')
+const foAuthRoute = require('./routes/foAuthRute')
+
 
 const authSignUp = require('./models/authSignUp')
 
@@ -64,6 +69,7 @@ app.use(express.static('public'));
 app.use('/',aoRoute )
 app.use('/',aoAuthRoute )
 app.use('/',foRoute)
+app.use('/', foAuthRoute)
 
 app.get("*", (req,res)=>{
     res.status(404).send("page does not exist")
