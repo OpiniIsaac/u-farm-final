@@ -1,0 +1,11 @@
+doctype html
+head
+  title Farmer One Dashboard
+  link(rel='stylesheet' href='css/aoDash.css')
+  script(src="/js/foDash.js") 
+#sidebar
+  .sidebar-item.active(onclick="showPage('foRegistrartion')") FO Registration
+  .sidebar-item(onclick="showPage('foApprove')") Registered FO
+  .sidebar-item(onclick="showPage('appiontNewFO')") Appoint New FO
+  .sidebar-item(onclick="showPage('foAuth')") FO Authentication
+iframe#page-content(src='foRegistrartion')

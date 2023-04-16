@@ -1,0 +1,30 @@
+doctype html
+head
+  title Create FO Authentication Details
+  link(rel='stylesheet' href='css/aoAuth.css')
+header
+  h1 Create FO Authentication Details
+main
+  form#regForm(name='register' onsubmit='return Validate();'  method = 'POST' action = '/foSignup' )
+    fieldset
+      legend FO Information
+      label(for='fullName') Full Name:
+      input#fullName(type='text' name='fullName' placeholder='Enter your full name')
+      small#fullNameError
+     
+      label(for='ward') Ward:
+      input#ward(type='text' name='ward' placeholder='Enter your ward')
+      small#wardError
+    fieldset
+      legend Authentication Details
+      label(for='username') Username:
+      input#username(type='text' name='username' placeholder='Enter your username')
+      small#usernameError
+      label(for='password') Password:
+      input#password(type='password' name='password' placeholder='Enter your password')
+      small#passwordError
+      label(for='confirmPassword') Confirm Password:
+      input#confirmPassword(type='password' name='confirmPassword' placeholder='Enter confirm password')
+      small#confirmPasswordError
+    button(type='submit') Create Authentication Details
+script(src='js/foAuth.js')
